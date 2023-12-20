@@ -13,6 +13,8 @@ import java.time.format.DateTimeFormatter;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import com.github.javafaker.Faker;
+import lombok.Value;
 
 public class ChangeDeliveryDateTest {
     @BeforeEach

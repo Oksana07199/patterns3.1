@@ -7,9 +7,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Random;
 
+
 public class DataGenerator {
     private DataGenerator() {
     }
+
 
     public static String generateDate(int shift) {
         // TODO: добавить логику для объявления переменной date и задания её значения, для генерации строки с датой
@@ -19,7 +21,7 @@ public class DataGenerator {
     }
 
     public static String generateCity() {
-        String [] cities= new String[]{"Чебоксары","Москва", "Санкт-Петербург", "Нижневартовск", "Казань", "Сочи", "Ростов-на-Дону","Екатеринбург"};
+        String [] cities= new String[]{"Чебоксары", "Москва", "Санкт-Петербург", "Нижневартовск", "Казань", "Сочи", "Ростов-на-Дону","Екатеринбург"};
         // TODO: добавить логику для объявления переменной city и задания её значения, генерацию можно выполнить
         // с помощью Faker, либо используя массив валидных городов и класс Random
 
