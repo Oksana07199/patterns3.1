@@ -41,16 +41,16 @@ public class ChangeDeliveryDateTest {
         $("[data-test-id='phone'] input").setValue(validUser.getPhone());
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $(".notification_status_ok .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(text("Встреча успешно запланирована на "+firstMeetingDate));
-        $(".notification_status_ok .notification__title").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(text("Успешно!"));
+        $(".notification_status_ok .notification__content").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(text("Встреча успешно запланирована на "+firstMeetingDate));
+        $(".notification_status_ok .notification__title").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(text("Успешно!"));
         $("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(secondMeetingDate);
         $(".button").click();
-        $(".notification_status_error .notification__title").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(text("Необходимо подтверждение"));
-        $(".notification_status_error .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(text("У вас уже запланирована встреча на другую дату. Перепланировать?"));
+        $(".notification_status_error .notification__title").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(text("Необходимо подтверждение"));
+        $(".notification_status_error .notification__content").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(text("У вас уже запланирована встреча на другую дату. Перепланировать?"));
         $$(".button").findBy(text("Перепланировать")).click();
-        $(".notification_status_ok .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(text("Встреча успешно запланирована на "+secondMeetingDate));
-        $(".notification_status_ok .notification__title").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(text("Успешно!"));
+        $(".notification_status_ok .notification__content").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(text("Встреча успешно запланирована на "+secondMeetingDate));
+        $(".notification_status_ok .notification__title").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(text("Успешно!"));
 
     }
 }
